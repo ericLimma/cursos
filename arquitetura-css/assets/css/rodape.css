@@ -1,0 +1,12 @@
+.rodape {
+    background: #bfbfbf;
+    color: #fdfdfd;
+    text-align: right;
+    padding: 1.57rem 5rem;
+    text-transform: lowercase;
+}
+@media  screen and (max-width:480px) {
+    .rodape{
+        padding: .5rem 1rem;
+    }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang pt-br>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--linka a fonte que vai ser uasada-->
+    <meta charset="UTF-8">
+    <!--usado para definir o conjunto de caracteres que serão usados-->
+    <meta name="viewport" content="width=device-width">
+    <!-- escolhe a resolução a ser renderezida-->
+    <title> Home | Barbearia Alura</title>
+    <!-- Coloca o titulo na aba-->
+    <link rel="shortcut icon" href="../assets/imagens/logo.png">
+
+
+    <!--configuração comum entre as paginas-->
+    <link rel="stylesheet" href="../assets/css/geral/reset.css">
+    <!--reseta as conf padrão do navegador-->
+    <link rel="stylesheet" href="../assets/css/geral/base.css">
+    <link rel="stylesheet" href="../assets/css/geral/cabecalho.css">
+    <link rel="stylesheet" href="../assets/css/geral/rodape.css">
+
+    <!--configuração da pagina home-->
+    <link rel="stylesheet" href="../assets/css/home/principal.css">
+    <link rel="stylesheet" href="../assets/css/home/banner.css">
+    <link rel="stylesheet" href="../assets/css/home/mapa.css">
+    <link rel="stylesheet" href="../assets/css/home/video.css">
+    <link rel="stylesheet" href="../assets/css/home/beneficios.css">
+
+</head>
+<!--utiliza-se esse espaço para colocar informações que não serão mostradas na pagina-->
+
+<body>
+    <!--utiliza-se esse espaço para colocar informações que serão mostradas na pagina-->
+    <header class="cabecalho container">
+        <!-- cabeçalho da pagina-->
+        <h1><img class="cabecalho__logo" src="../assets/imagens/logo-branco.png"></h1>
+
+        <nav class="cabecalho__navegacao">
+            <!-- usado para criar uma area de links-->
+            <ul class="cabecalho__lista">
+                <!--usado para criar uma lista-->
+                <li class="cabecalho__lista--itens"><a class="cabecalho__lista--links" href="index.html">Home</a></li>
+                <!--cria um item da lista-->
+                <!--<a> usado para criar link-->
+                <li class="cabecalho__lista--itens"><a class="cabecalho__lista--links" href="produtos.html">Produtos</a>
+                </li>
+                <li class="cabecalho__lista--itens"><a class="cabecalho__lista--links" href="contato.html">Contatos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="banners">
+        <img class="banner" src="../assets/imagens/banner.jpg">
+    </div>
+    
+    <main>
+        <!--conteudo principal da pagina-->
+        <section class="principal sombra">
+            <!--semelhante ao div-->
+            <h1 class="principal__titulo titulo">Sobre a Barbearia Alura</h1>
+            <!--subtitulo-->
+            <img class="principal__imagem" src="../assets/imagens/utensilios2.jpg" alt="Utensilios de um barbeiro.">
+            <!--alt é usado para acessibilidade-->
+
+            <p class="principal__texto">Localizada no coração da cidade a <strong
+                    class="principal__texto--enfase">Barbearia Alura</strong> traz para o mercado o que há de melhor
+                para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos
+                clientes a cada dia.</p>
+            <!--<p> usado para criar um paragrafo-->
+            <!--<strong> </strong> usado para destacar um trecho do paragrafo-->
+
+            <p class="principal__texto--missao"><em class="principal__texto-italico">Nossa missão é: <strong
+                        class="principal__texto--negrito">Proporcionar auto-estima e qualidade de vida aos
+                        clientes"</strong>.</em></p>
+            <!--<em> </em> usado para deixar trecho em italico-->
+
+            <p class="principal__texto">Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O
+                atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos
+                clientes.</p>
+        </section>
+        <section class="mapa sombra">
+            <!--usado para criar a area do mapa-->
+            <h3 class="mapa__titulo titulo">Nosso estabelecimento</h3>
+            <p class="mapa__texto">Nosso estabelecimento está localizado no coração da cidade.</p>
+
+            <div class="mapa__conteudo">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.4483278365396!2d-46.63466568562861!3d-23.588249068469487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sCaelum!5e0!3m2!1spt-BR!2sbr!4v1568814489656!5m2!1spt-BR!2sbr"
+                    width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+        </section>
+
+        <section class="beneficios sombra">
+            <h3 class="beneficios__titulo titulo">Benefícios</h3>
+
+            <div class="beneficios__conteudo">
+                <ul class="beneficios__lista">
+                    <li class="beneficios__lista--item">Atendimento aos Clientes</li>
+                    <li class="beneficios__lista--item">Espaço diferenciado</li>
+                    <li class="beneficios__lista--item ">Localização</li>
+                    <li class="beneficios__lista--item ">Profissionais Qualificados</li>
+                    <li class="beneficios__lista--item ">Higiene</li>
+                </ul>
+                <img src="../assets/imagens/beneficios.jpg " class="beneficios__imagem">
+            </div>
+
+        </section>
+        <div class="video ">
+            <!--cria a area de de video-->
+            <iframe width="100% " height="315 " src="https://www.youtube.com/embed/wcVVXUV0YUY " frameborder="0 "
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture "
+                allowfullscreen></iframe>
+        </div>
+    </main>
+
+    <footer class="rodape ">
+        <img src="../assets/imagens/logo-branco.png">
+        <p class="copyright ">&copy; Copyright Barbearia Alura - 2019</p>
+    </footer>
+</body>
+
+</html>

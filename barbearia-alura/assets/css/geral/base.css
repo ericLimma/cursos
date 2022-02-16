@@ -1,0 +1,44 @@
+/*define variaveis a serem usadas no projeto*/
+
+:root {
+    --azul-escuro: #1b2434;
+    --branco: rgb(243, 236, 236);
+    --cinza-claro: #F7F4F4;
+    --cinza-escuro: #4F4C4C;
+    --cinza-medio: #D9D9D9;
+    --fonte-cinza: #666;
+    --fonte-link: #0084FF;
+    --vermelho-forte: #B72E2E;
+}
+
+/*configuração geral de todas as paginas*/
+
+body {
+    font-family: 'Zen Kurenaido', sans-serif;
+    /*seleciona a fonte usada*/
+}
+
+.titulo {
+    font-weight: 400;
+    padding: 1rem 0 1rem 0;
+    text-align: center;
+}
+
+.sombra {
+    box-shadow: 10px 10px 10px 0 #505050b0;
+}
+
+.container {
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+
+/**
+@media screen and (min-width: 1025px) {
+    .container {
+        padding-left: calc((100% - 940px)/2);
+        padding-right: calc((100% - 940px)/2);
+    }
+}
+*/

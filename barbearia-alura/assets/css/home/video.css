@@ -1,0 +1,10 @@
+.video {
+    margin: 1rem auto;
+    width: 560px;
+}
+
+@media screen and (max-width: 480px) {
+    .video{
+        width:100%;
+    }
+}

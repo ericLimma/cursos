@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang pt-br>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--linka a fonte que vai ser uasada-->
+    <meta charset="UTF-8">
+    <!--usado para definir o conjunto de caracteres que serão usados-->
+    <meta name="viewport" content="width=device-width">
+    <!-- escolhe a resolução a ser renderezida-->
+    <title> Produtos | Barbearia Alura</title>
+    <!-- Coloca o titulo na aba-->
+    <link rel="shortcut icon" href="../assets/imagens/logo.png">
+
+
+    <!--configuração comum entre as paginas-->
+    <link rel="stylesheet" href="../assets/css/geral/reset.css">
+    <!--reseta as conf padrão do navegador-->
+    <link rel="stylesheet" href="../assets/css/geral/base.css">
+    <link rel="stylesheet" href="../assets/css/geral/cabecalho.css">
+    <link rel="stylesheet" href="../assets/css/geral/rodape.css">
+
+    <!--configuração da pagina produtos-->
+    <link rel="stylesheet" href="../assets/css/produtos/produtos.css">
+
+
+
+</head>
+<!--utiliza-se esse espaço para colocar informações que não serão mostradas na pagina-->
+
+<body>
+    <!--utiliza-se esse espaço para colocar informações que serão mostradas na pagina-->
+    <header class="cabecalho container">
+        <!-- cabeçalho da pagina-->
+        <h1><img class="cabecalho__logo" src="../assets/imagens/logo-branco.png"></h1>
+
+        <nav class="cabecalho__navegacao">
+            <!-- usado para criar uma area de links-->
+            <ul class="cabecalho__lista">
+                <!--usado para criar uma lista-->
+                <li class="cabecalho__lista--itens"><a class="cabecalho__lista--links" href="index.html">Home</a></li>
+                <!--cria um item da lista-->
+                <!--<a> usado para criar link-->
+                <li class="cabecalho__lista--itens"><a class="cabecalho__lista--links" href="produtos.html">Produtos</a>
+                </li>
+                <li class="cabecalho__lista--itens"><a class="cabecalho__lista--links" href="contato.html">Contatos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <ul class="produtos">
+            <li class="produtos__card">
+                <h2 class="produtos__titulo">Cabelo</h2>
+                <img class="produtos__imagem" src="../assets/imagens/cabelo.jpg">
+                <p class="produtos__descricao">Na tesoura ou máquina, como o cliente preferir</p>
+                <p class="produtos__preco">R$ 25,00</p>
+            </li>
+
+            <li class="produtos__card">
+                <h2 class="produtos__titulo">Barba</h2>
+                <img class="produtos__imagem" src="../assets/imagens/barba.jpg">
+                <p class="produtos__descricao">Corte e desenho profissional de barba</p>
+                <p class="produtos__preco">R$ 18,00</p>
+            </li>
+
+            <li class="produtos__card">
+                <h2 class="produtos__titulo">Cabelo + Barba</h2>
+                <img class="produtos__imagem" src="../assets/imagens/cabelo+barba.jpg">
+                <p class="produtos__descricao">Pacote completo de cabelo e barba</p>
+                <p class="produtos__preco">R$ 35,00</p>
+            </li>
+
+    </main>
+
+    <footer class="rodape">
+        <img src="../assets/imagens/logo-branco.png">
+        <p class="copyright ">&copy; Copyright Barbearia Alura - 2019</p>
+    </footer>
+
+</body>
+
+</html>

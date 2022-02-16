@@ -1,0 +1,8 @@
+/*configuração geral de todas as paginas - rodapé*/
+
+.rodape {
+    background: url("../../imagens/bg.jpg");
+    color: var(--branco);
+    padding: 1.5rem 0;
+    text-align: center;
+}

@@ -1,0 +1,55 @@
+.receitas{
+    background-color: #E5E5E5;
+    display:flex;
+    flex-wrap: wrap; /*quebra as linhas dos elementos flex*/
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem;
+    position: relative;
+}
+.receita{
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1.5rem 1rem 1.5rem 1rem;
+    width:286px;
+
+}
+.receita__imagem{
+    width:100%;
+}
+.receita__titulo{
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.receita__descricao{
+    font-size:1.2rem;
+    margin:1rem;
+    text-align: justify;
+    
+}
+.receita__botao{
+    background-color: #8D0606;
+    border: none;
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin: 1rem;
+    padding: .3rem;
+    transition: all .2s ease-in-out;
+}
+.receita__botao:hover{
+    cursor:pointer;
+    background-color: #c52e2e;
+    /*muda o cursor do mouse para a maozinha de quando e link*/
+}
+
+@media  screen and (max-width:480px) {
+    .receitas{
+        align-items: center;
+    }
+    .receita{
+        margin: 1.5rem auto 1.5rem auto;
+    }
+}

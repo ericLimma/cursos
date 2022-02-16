@@ -1,0 +1,62 @@
+/*configuração do formulario*/
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 2rem;
+    width: 80%;
+}
+
+.formulario__etiqueta, .contato__legenda, .horario__legenda {
+    font-size: 1.2rem;
+    margin: 0 0 .7rem;
+}
+
+.formulario__input, .formulario__mensagem {
+    font-size: 1rem;
+    margin: 0 0 1.2rem;
+    padding: 1rem;
+    width: 50%;
+}
+
+.contato label {
+    font-size: .8 rem;
+}
+
+.contato, .horario {
+    margin: 1rem 0 0 0;
+}
+.horario select{
+    background-color: #e7cece;
+    font-size: .8rem;
+    border: none;
+    width: 15%;
+
+}
+.botao {
+    margin: 3rem auto .5rem auto;
+}
+
+.botao__enviar {
+    width: 40%;
+    margin: .5rem auto .5rem auto;
+    padding: 1rem 0;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border: none;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.botao__enviar:hover {
+    background: red;
+    transform: scale(1.2);
+}
+
+.botao__checkbox {
+    font-size: .6rem;
+    margin: .1rem auto .5rem auto;
+}
