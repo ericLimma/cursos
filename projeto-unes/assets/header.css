@@ -1,0 +1,29 @@
+.cabecalho{
+    display: grid;
+    grid-template-areas: 
+    "logo"
+    "navagacao";
+    grid-template-columns: auto 30%;
+    margin: 1rem 0 1rem 0;
+}
+.cabecalho__lista{
+    align-items: center;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    list-style: none;
+
+}
+.cabecalho__lista li{
+    padding: 1rem;
+}
+.cabecalho__link {
+    color: gray;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.cabecalho__link:hover{
+    font-size: 1.5rem;
+    text-decoration: underline;
+}

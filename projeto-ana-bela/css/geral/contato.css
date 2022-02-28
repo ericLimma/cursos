@@ -1,0 +1,16 @@
+.contato{
+    display: flex;
+    margin: 0 auto;
+    padding-top: 2em ;
+    justify-content: space-around;
+    width: 80%;
+}
+.contato__whatsapp, .contato__email{
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+    padding: 1.5em;
+}
+.icone {
+    padding-right: 1em;
+}

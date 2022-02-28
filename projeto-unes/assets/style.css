@@ -1,0 +1,15 @@
+html{
+    border-top: 1rem solid #1b2434 ;
+
+}
+ 
+body{
+    background-color: #fefefe;
+    font-family: "Roboto", sans-serif;
+    margin: auto;
+    padding-bottom: 2rem;
+    width: calc(100% - 0.9 * 300px)
+}
+main{
+    padding-bottom: 2rem;
+}

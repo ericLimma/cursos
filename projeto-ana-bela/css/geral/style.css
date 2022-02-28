@@ -1,0 +1,18 @@
+html{
+    background: url(../../imagens/fundo.png);
+    font-family: "Roboto", sans-serif;
+    margin: 0 auto;
+    padding: 0 1em;
+    width: 900px;
+}
+.conteiner{
+    background-color: #f3f3f3;
+    padding: 1em;
+}
+.link{
+    color: #1b2434;
+    text-decoration: none;
+}
+.link:hover{
+    color: gray;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<meta http-equiv="refresh" content="2; index.html">
+        cria um temporizador que atualiza automaticamente minha pagina durante o desenvolvimento-->
+
+        <title>Meu site</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href='../imagens/ico/capelo.png'>
+        <link rel="stylesheet" href="../assets/style.css">
+        <link rel="stylesheet" href="../assets/header.css">
+        <link rel="stylesheet" href="../assets/footer.css">
+        <link rel="stylesheet" href="../assets/formulario.css">
+    </head>
+
+    <body>
+        <header class="cabecalho">
+            <img class = "cabeclho__imagem" src="../imagens/logo.png">
+            <nav class="cabecalho__navegacao">
+                <ul class = "cabecalho__lista">
+                    <li><a class = "cabecalho__link" href="./index.html">home</a></li>
+                    <li><a class = "cabecalho__link" href="./sobre.html">sobre</a></li>
+                    <li><a class = "cabecalho__link" href="#">contato</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>Entre em contato</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <hr>
+            
+            <form class = "formulario">
+                    <label class = "formulario__email--etiqueta etiqueta" for="email"  >Seu e-mail:</label>
+                    <input class="formulario__input formulario__email--input" type="email" name="email" placeholder = "email@dominio.com"  id="email" required>
+
+                    <label class = "formulario__assunto--etiqueta etiqueta" for = "assunto" >Assunto:</label>
+                    <input class="formulario__input formulario__assunto--input" type="text" name="assunto">
+
+                    <label class = "formulario__descricao--etiqueta etiqueta" for ="texto">Descrição:</label>
+                    <textarea class = "formulario__input formulario__descricao--input " cols="30" rows="10" id="descricao" required placeholder="Digite aqui sua mensagem"></textarea>
+                    
+                    <class class="botao">
+                        <input class = "botao__input" type="submit" value="Enviar">
+                    </class>
+            </form>
+        </main>
+        <footer>
+            <p class="copyright">&copy; Todos os direitos reservados</p>
+        </footer>
+    </body>
+</html>
