@@ -1,0 +1,30 @@
+ .coluna__principal{
+    position: relative;
+} 
+.principal__conteiner{
+    margin: 0 auto;
+    width: 50%;
+}
+.postagens{
+    background-color: #fefefe;
+    border-bottom: 1px #1b2456;
+    margin-top: .5em;
+    padding: 1.5em;
+}
+.postagens__titulo{
+    color: #F6A90A;
+    font-size: 2rem;
+    font-weight: 400;
+}
+.postagens__data{
+    font-weight: bold;
+    margin-top: .5em;
+}
+.postagens__imagem{
+    margin-top: 1em;
+    width: 100%;
+}
+.postagens__ver-mais{
+    padding-top: 2em;
+    color: #F6A90A;
+}

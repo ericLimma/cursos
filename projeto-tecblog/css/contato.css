@@ -1,0 +1,25 @@
+.coluna_esquerda{
+    float: left;
+    left: 1%;
+    margin:0 auto;
+    position: absolute;
+    top: 0;
+    width: 18%;
+}
+.redes_sociais{
+    text-align: center;
+}
+.contato__whatsapp,.contato__email{
+    align-items: center;
+    display: flex;
+    font-size: 1.2em;
+    padding:1em;
+}
+.icone{
+    margin-right: 1em;
+}
+.contatos__titulo{
+    color: #F6A90A;
+    font-size: 2rem;
+    font-weight: 400;
+}

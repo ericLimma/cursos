@@ -1,0 +1,31 @@
+.header{
+    background-color: #F6A90A;
+    width: 100%;
+}
+.conteiner__header{
+    margin: auto;
+    padding: 2rem 0;
+    text-align: center;
+    width: 100%;
+}
+.header__title{
+    font-size: 3rem;
+    color: #2B2929;
+    font-weight: 900;
+}
+.header__title span{
+    color: white;
+}
+.header__list{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding-top: 1em;
+    width: 60%;
+}
+.header__list--itens a{
+    color:#2B2929;
+    font-size: 1.7em;
+    font-weight: 600;
+    padding: 1em;
+}
