@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    width: 25%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+
+}
+
+ul li {
+    background-color: #ffa500;
+    list-style: none;
+}
+
+ul li:hover, .selecionado a {
+    background-color: #d48c07;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #363636;
+    line-height: 3rem;
+    width: 25vw;
+    text-indent: 2rem;
+    display: block;
+
+}
