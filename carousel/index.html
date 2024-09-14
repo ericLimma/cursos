@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script src="https://kit.fontawesome.com/0740295107.js" crossorigin="anonymous"></script>
+
+    <style>
+        .carousel {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .carousel-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            flex: 0 0 auto;
+            width: 2rem;
+            /* Ajuste conforme necessário */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .carousel-items {
+            display: flex;
+            transition: transform 0.5s ease;
+            font-family: inherit;
+        }
+
+        .carousel-item {
+            flex: 0 0 auto;
+            width: 250px;
+            height: 150px;
+            margin: 0 1rem;
+            background-color: darkgreen;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-family: 'The Bold';
+        }
+
+        .carousel-dots {
+            display: flex;
+            gap: 5px;
+            width: 100px;
+            justify-content: center;
+        }
+
+        .dot {
+            flex: 0 0 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: #f5f5f5;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main">
+        <div class="carousel">
+            <div class="carousel-container">
+                <div class="carousel-control-prev">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="carousel-items">
+                    <div class="carousel-item">1</div>
+                    <div class="carousel-item">2</div>
+                    <div class="carousel-item">3</div>
+                    <div class="carousel-item">4</div>
+                    <div class="carousel-item">5</div>
+                    <div class="carousel-item">6</div>
+                    <div class="carousel-item">7</div>
+                    <div class="carousel-item">8</div>
+                    <div class="carousel-item">9</div>
+                    <div class="carousel-item">10</div>
+                    <div class="carousel-item">11</div>
+                    <div class="carousel-item">12</div>
+                    <div class="carousel-item">13</div>
+                    <div class="carousel-item">14</div>
+                </div>
+                <div class="carousel-control-next">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+            <div class="carousel-dots" id="carousel-dots">
+            </div>
+        </div>
+    </main>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const carouselItems = document.querySelectorAll('.carousel-item');
+            const carouselDots = document.getElementById('carousel-dots');
+            const itemsContainer = document.querySelector('.carousel-items');
+            const totalItems = carouselItems.length;
+            let currentIndex = 1; // Começar com o segundo item real, após o clone inicial
+
+            // Clonar o primeiro e o último item
+            const firstItemClone = carouselItems[0].cloneNode(true);
+            const lastItemClone = carouselItems[totalItems - 1].cloneNode(true);
+
+            itemsContainer.appendChild(firstItemClone);
+            itemsContainer.insertBefore(lastItemClone, carouselItems[0]);
+
+            function criarDots() {
+                carouselItems.forEach((item, index) => {
+                    let dot = document.createElement('span');
+                    dot.className = 'dot';
+                    dot.dataset.index = index;
+                    carouselDots.appendChild(dot);
+                });
+                atualizarDots();
+            }
+
+            function atualizarDots() {
+                document.querySelectorAll('.dot').forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex - 1); // Ajustar o índice
+                });
+            }
+
+            function mostrarItem(index) {
+                const itemWidth = carouselItems[0].getBoundingClientRect().width;
+
+                // Ajusta o índice
+                if (index >= totalItems + 1) index = 1;
+                if (index <= 0) index = totalItems;
+
+                itemsContainer.style.transform = `translateX(-${index * itemWidth}px)`;
+                currentIndex = index;
+                atualizarDots();
+
+                // Verifica se o índice é um clone para reposicionar corretamente
+                if (currentIndex === totalItems + 1) {
+                    setTimeout(() => {
+                        itemsContainer.style.transition = 'none';
+                        itemsContainer.style.transform = `translateX(-${itemWidth}px)`;
+                        currentIndex = 1;
+                        atualizarDots();
+                    }, 500); // Tempo de transição
+                } else if (currentIndex === 0) {
+                    setTimeout(() => {
+                        itemsContainer.style.transition = 'none';
+                        itemsContainer.style.transform = `translateX(-${totalItems * itemWidth}px)`;
+                        currentIndex = totalItems;
+                        atualizarDots();
+                    }, 500); // Tempo de transição
+                }
+            }
+
+            document.querySelector('.carousel-control-next').addEventListener('click', function () {
+                mostrarItem(currentIndex + 1);
+            });
+
+            document.querySelector('.carousel-control-prev').addEventListener('click', function () {
+                mostrarItem(currentIndex - 1);
+            });
+
+            carouselDots.addEventListener('click', function (e) {
+                if (e.target.classList.contains('dot')) {
+                    let index = parseInt(e.target.dataset.index, 10);
+                    mostrarItem(index + 1); // Ajustar o índice
+                }
+            });
+
+            criarDots();
+            mostrarItem(currentIndex);
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111518;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    color: #f5f5f5;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 200;
+}
+
+body div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

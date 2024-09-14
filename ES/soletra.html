@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Soletra</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <script src="https://kit.fontawesome.com/0740295107.js" crossorigin="anonymous"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="assets/favicon/site.webmanifest" />
+
+</head>
+
+<body>
+  <main class="main">
+    <section>
+      <div class="soletra">
+        <div class="row">
+          <div class="letra">a</div>
+          <div class="letra">b</div>
+        </div>
+        <div class="row">
+          <div class="letra">c</div>
+          <div class="letra letra-principal">g</div>
+          <div class="letra">e</div>
+        </div>
+        <div class="row">
+          <div class="letra">d</div>
+          <div class="letra">f</div>
+        </div>
+      </div>
+    </section>
+    <style>
+      .soletra {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        width: 400px;
+        aspect-ratio: 1/1;
+        text-transform: uppercase;
+        font-family: 'The Bold', sans-serif;
+      }
+
+      .soletra .row {
+        gap: .5rem;
+      }
+
+      .letra {
+        width: 5rem;
+        font-size: 2rem;
+        aspect-ratio: 1 / 1;
+        background-color: #1e1e1e57;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      .letra-principal {
+        background-color: #087c50;
+      }
+    </style>
+  </main>
+
+</body>
+
+</html>

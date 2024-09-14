@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Operadores Aritméticos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/0740295107.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest" />
+  </head>
+
+  <body>
+    <section class="script">
+      <h3>Script de resolução</h3>
+      <fieldset>
+        <label for="name">Nome:</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Digite seu nome..."
+        />
+      </fieldset>
+      <fieldset>
+        <label for="height">Altura:</label>
+        <input
+          type="text"
+          name="height"
+          id="height"
+          class="numericInput"
+          placeholder="Digite sua altura em cm... "
+        />
+      </fieldset>
+      <fieldset>
+        <label for="weight">Peso:</label>
+        <input
+          type="text"
+          name="weight"
+          id="weight"
+          class="numericInput"
+          placeholder="Digite seu peso em kg... "
+        />
+      </fieldset>
+      <fieldset>
+        <button class="btn" onclick="calcIMC()">Verificar</button>
+      </fieldset>
+      <h4>Resultado:</h4>
+      <div id="result">
+        Por favor, insira valores válidos para altura e peso.
+      </div>
+
+      <script>
+        function clearInput(e) {
+          let value = e.target.value;
+          e.target.value = value.replace(/[^0-9]/g, "");
+        }
+
+        function clearInputName(e) {
+          let value = e.target.value;
+          e.target.value = value.replace(/[^a-zA-Z]/g, "");
+        }
+
+        document
+          .getElementById("name")
+          .addEventListener("input", clearInputName);
+        document.getElementById("height").addEventListener("input", clearInput);
+        document.getElementById("weight").addEventListener("input", clearInput);
+
+        function calcIMC() {
+          let name = document.getElementById("name").value;
+          let height = document.getElementById("height").value;
+          let weight = document.getElementById("weight").value;
+          let result = document.getElementById("result");
+          let grau = "";
+
+          let heightCM = parseFloat(height) / 100;
+          let weightFloat = parseFloat(weight);
+
+          if (
+            isNaN(heightCM) ||
+            isNaN(weightFloat) ||
+            heightCM <= 0 ||
+            weightFloat <= 0
+          ) {
+            result.textContent =
+              "Por favor, insira valores válidos para altura e peso.";
+            return;
+          }
+
+          let imc = weightFloat / (heightCM * heightCM);
+
+          if (imc < 16) {
+            grau = "Baixo peso muito grave";
+          } else if (imc > 16 && imc < 16.99) {
+            grau = "Baixo peso grave";
+          } else if (imc >= 17 && imc < 18.49) {
+            grau = "Baixo peso normal";
+          } else if (imc >= 18.5 && imc < 24.99) {
+            grau = "Peso Normal";
+          } else if (imc >= 25 && imc < 29.99) {
+            grau = "Obesidade Grau I";
+          } else if (imc >= 30 && imc < 34.99) {
+            grau = "Obesidade Grau II";
+          } else if (imc >= 35 && imc < 39.99) {
+            grau = "Obesidade Grau III";
+          }
+
+          result.textContent = `Olá ${name}, seu IMC é: ${imc.toFixed(
+            2
+          )}. Assim, hoje você está na faixa de ${grau}`;
+        }
+      </script>
+      <div>
+        Crie uma aplicação para efetuar o cálculo do índice de massa corporal.
+        <br />
+        Considere os seguintes critérios:
+        <br />
+        <div class="indent">
+          1 - Ao executar o script a aplicação deve solicitar a entrada do nome
+          da pessoa.<br />
+          2 - Na sequência a aplicação deve solicitar que seja informada a
+          altura da pessoa em centímetros. <br />
+          4 - Após as entradas de dados, atente-se a conversão das informações
+          para dados do tipo float. <br />
+          5 - Converta a altura recebida em centímetros para metros. (basta
+          dividir a altura por 100 ).<br />
+          6 - Internamente a aplicação deve executar o cálculo do índice de
+          massa corporal através da expressão: M = peso (quilos - ÷ altura²)<br />
+          7 - Após identificar o índice de massa corporal o sistema deverá
+          classificar em faixas descritivas utilizando os critérios abaixo:<br />
+          <div class="indent">
+            a - Se M estiver abaixo de 16 : Baixo peso muito grave<br />
+            b - Se M estiver entre 16 e 16,99: Baixo peso grave <br />
+            c - Se M estiver entre 17 e 18,49: Baixo peso<br />
+            d - Se M estiver entre 18,50 e 24,99: Peso normal <br />
+            e - Se M estiver entre 25 e 29,99: Sobrepeso<br />
+            f - Se M estiver entre 30 e 34,99: Obesidade grau I<br />
+            g - Se M estiver entre 35 e 39,99: Obesidade grau II<br />
+            h - Se M for maior que 40: Obesidade grau III<br />
+            8 - Ao término o sistema deve fornecer a seguinte saída para o
+            usuário:<br />
+            <div class="indent">
+              “'Nome' possui índice de massa corporal igual a 'm', sendo
+              classificado como:<br />
+              'classificação'.”
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+
+        .indent {
+          padding: 1rem;
+        }
+        fieldset {
+          display: flex;
+          flex-direction: column;
+          max-width: 60%;
+          gap: 0.2rem;
+          margin-top: 1rem;
+        }
+
+        #result {
+          height: 45px;
+          width: 100%;
+          margin-bottom: 4rem;
+        }
+      </style>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Funções Nativas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <script src="https://kit.fontawesome.com/0740295107.js" crossorigin="anonymous"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png" />
+  <link rel="manifest" href="assets/favicon_io/site.webmanifest" />
+</head>
+
+<body>
+  <section>
+    <h1>Java Script</h1>
+    <h3>Funções Nativas de Manipulação de strings.</h3>
+    <div>
+      <pre><code>
+          let str = "Aumari";
+          str.lenght; // 6 - conta os caracteres
+          str.charAt(3); // A - retorna o caracter no indice passado como parametro
+          str.indexOf('a'); // 0 - retorna o indice da primeira ocorrência do caracter passado como parametro
+          str.replace(/a/g, '@'); // pesquisa o primeiro parâmetro e substitui pelo segundo,
+                                  o /g faz com que todas as ocorrencias seja substituidas.
+          escreva(str.toLowerCase()); // transforma caracteres em minusculo
+          escreva(str.toUpperCase()); // transforma caracteres em maiusculo
+        </code></pre>
+      <script>
+        function escreva(text) {
+          document.write(text + "<br>");
+        }
+
+
+        let str = "aumari";
+        let str1 = " aumari Junior ";
+
+        escreva(str.length);
+        escreva(str.charAt(3));
+        escreva(str.indexOf("a"));
+        escreva(str.replace(/a/g, "@"));
+        escreva(str.substr(0, 3));
+        escreva(str.toLowerCase());
+        escreva(str.toUpperCase());
+        escreva(str1.trim());
+      </script>
+    </div>
+  </section>
+  <section>
+    <h3>Funções Nativas de Matemática.</h3>
+    <div>
+      <pre><code>
+          let num = 10.380;
+
+          math.ceil(num) // 11 - arrendonda para cima
+          Math.floor(num) // 10 - arrendonda para baixo
+          Math.round(num) // 10 - arrendonda para o mais próximo
+          Math.sqrt(num) // raiz quadrada
+          Math.random() // fornece um numero aleatorio entre 0 e 1.
+        </code></pre>
+      <script>
+        let num = 10.38;
+
+        escreva(Math.ceil(num));
+        escreva(Math.floor(num));
+        escreva(Math.round(num));
+        escreva(Math.sqrt(num));
+        escreva(Math.random());
+      </script>
+    </div>
+  </section>
+  <section>
+    <h3>Funções Nativas de Data</h3>
+    <p>Útil para pesquisas e marcações temporais.</p>
+    <div>
+      <pre><code>
+          let date = new Date; // instancia um objeto do tipo data.
+          date.getDate(); // fornece o dia do mês
+          date.getDay(); // fornece o dia da semana.
+          date.getMonth() + 1; // fornece o mês.
+          date.getHours(); // fornece a hora.
+          date.getMinutes(); // fornece os minutos.
+          date.getSeconds(); // fornece os segundos.
+          date.getMilliseconds(); // fornece os Millisegundos
+          date.getFullYear(); //fornece o ano atual
+
+          //set date
+
+          date.setDate(date.getDate() + 720) // soma 720 dias ao dia atual.
+          date.setMonth(date.getMonth() + 5) // soma 5 meses a partir do mes atual.
+          date.setFullYear(date.getFullYear() + 5) //soma 5 anos a partir do ano atual.
+
+          //Calculo entre datas
+
+          let data1 = new Date(2017, 0, 15); // 15/01/2017
+          let data2 = new Date(2017, 1, 23); // 23/02/2017
+
+          (data1 - data2).toDateString() // não funciona
+          
+
+        </code></pre>
+
+      <script>
+        let date = new Date();
+
+        function exibirData() {
+          alert(document.getElementById('data').value)
+        }
+        escreva(date);
+        escreva(date.getDate());
+        escreva(date.getDay());
+        escreva(date.getMonth() + 1);
+        escreva(date.getHours());
+        escreva(date.getMinutes());
+        escreva(date.getSeconds());
+        escreva(date.getMilliseconds());
+        escreva(date.getFullYear());
+
+        escreva('<hr>');
+
+        date.setDate(date.getDate() + 45);
+        escreva(date.getDate());
+        date.setMonth(date.getMonth() + 45);
+        escreva(date.getMonth());
+        date.setFullYear(date.getFullYear() + 2);
+        escreva(date.getFullYear());
+
+        escreva('<hr>');
+
+        let data1 = new Date(2017, 0, 15); // 15/01/2017
+        let data2 = new Date(2017, 1, 23); // 23/02/2017
+        let diferencaData = data2.getTime() - data1.getTime();
+
+        escreva(data1.toDateString() + ' - data1');
+        escreva(data2.toDateString() + ' - data2');
+        escreva(data1.getTime() + ' - data1 em millisegundos');
+        escreva(data2.getTime() + ' - data2 em millisegundos');
+        escreva(diferencaData + ' - diferença entre as datas em millisegundos');
+
+
+      </script>
+    </div>
+  </section>
+
+  <style>
+    .data-h3 {
+      font-family: 'The Bold';
+    }
+  </style>
+</body>
+
+</html>

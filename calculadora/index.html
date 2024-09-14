@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <script src="https://kit.fontawesome.com/0740295107.js" crossorigin="anonymous"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/particles.css">
+
+</head>
+
+<body>
+    <div id="particles-js"></div>
+    <div class="calc-body">
+        <div class="status-bar desktop">
+            <div class="clock" id="clock"></div>
+            <div class="camera">
+
+            </div>
+            <div class="batery-signal">
+                <span><img src="assets/icons/signal.png" alt=""></span>
+                <span><img src="assets/icons/battery.png" alt=""></span>
+            </div>
+
+        </div>
+        <div class="menu">
+            <button>
+                <span class="menu-icon">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+                <span class="menu-text">
+                    menu
+                </span>
+            </button>
+            <button class="btn btn-back-space">
+                <span class="menu-text">
+                    Científica
+                </span>
+                <span class="menu-icon">
+                </span>
+            </button>
+        </div>
+        <div class="display">
+            <div class="display-visor" id="display-visor">
+                <div>0</div>
+            </div>
+            <div class="display-result" id="display-result">
+
+            </div>
+        </div>
+        <div class="keypad">
+            <input type="checkbox" class="dropdown-input" id="dropdown">
+            <label for="dropdown" class="dropdown-label">
+                <span class="dropdown-icon">^</span>
+                <div class="function-keys">
+                    <div class="num-row">
+                        <button class="btn btn-function">(</button>
+                        <button class="btn btn-function">)</button>
+                        <button class="btn btn-function">x²</button>
+                        <button class="btn btn-function">&#8730;</button>
+                    </div>
+                </div>
+            </label>
+            <div class="num-pad">
+                <div class="num-row">
+                    <button class="btn btn-clear">C</button>
+                    <button class="btn btn-function">%</button>
+                    <button class="btn btn-operator divide" data-value="/">&#247;</button>
+                    <button class="btn btn-function btn-backspace btn-blue"" data-value=" delete">
+                        <i class="fa-solid fa-delete-left"></i>
+                    </button>
+                </div>
+                <div class="num-row">
+                    <button class="btn btn-number" data-value="7">7</button>
+                    <button class="btn btn-number" data-value="8">8</button>
+                    <button class="btn btn-number" data-value="9">9</button>
+                    <button class="btn btn-operator" data-value="*">x</button>
+                </div>
+                <div class="num-row">
+                    <button class="btn btn-number" data-value="4">4</button>
+                    <button class="btn btn-number" data-value="5">5</button>
+                    <button class="btn btn-number" data-value="6">6</button>
+                    <button class="btn btn-operator" data-value="-">-</button>
+                </div>
+                <div class="num-row">
+                    <button class="btn btn-number" data-value="1">1</button>
+                    <button class="btn btn-number" data-value="2">2</button>
+                    <button class="btn btn-number" data-value="3">3</button>
+                    <button class="btn btn-operator" data-value="+">+</button>
+                </div>
+                <div class="num-row">
+                    <button class="btn btn-number" data-value=".">.</button>
+                    <button class="btn btn-number" data-value="0">0</button>
+                    <button class="btn btn-function" data-value="negate">±</button>
+                    <button class="btn btn-blue" data-value="=">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="http://threejs.org/e-amples/js/libs/stats.min.js"></script>
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/app-3.js"></script>
+    <script src="assets/js/clock.js"></script>
+</body>
+
+</html>

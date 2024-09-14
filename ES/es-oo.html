@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ECMAScript</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <script src="https://kit.fontawesome.com/0740295107.js" crossorigin="anonymous"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="assets/favicon/site.webmanifest" />
+
+</head>
+
+<body>
+  <main class="main">
+    <section>
+      <h1>ECMAScript 6 </h1>
+      <h3>Paradigma de Orientação a Objetos (OO)</h3>
+      <p>Paradigma - Forma, padrão, ou método de se fazer algo.</p>
+      <pre><code>
+        class Calculadora {
+          constructor() {
+            this.a = 10;
+            this.b = 7;
+            this.operador = 'mult';
+          }
+          calcular() {
+            if (this.operador === 'mult') {
+              console.log(this.a * this.b)
+            }
+          }
+        }
+      </code></pre>
+      <h4>Os quatros pilares da Orientação à Objetos</h4>
+
+      <div class="d-flex gap-4 justify-content-start">
+        <div class="d-flex flex-column gap-2  align-items-center">
+          <img class="pillar" src="assets/icons/pillar.png" alt="">
+          <strong>Abstração</strong>
+          <ul>
+            <li>Entidade</li>
+            <li>Identidade</li>
+            <li>Características</li>
+            <li>Ações</li>
+          </ul>
+
+        </div>
+        <div class="d-flex flex-column gap-2 align-items-center">
+          <img class="pillar" src="assets/icons/pillar.png" alt="">
+          <strong>Encapsulamento</strong>
+          <ul>
+            <li>Seguro</li>
+            <li>Reutilizável</li>
+          </ul>
+
+        </div>
+        <div class="d-flex flex-column gap-2  align-items-center">
+          <img class="pillar" src="assets/icons/pillar.png" alt="">
+          <strong>Herança</strong>
+          <ul>
+            <li>Reutilizável</li>
+            <li>Manutenção</li>
+
+          </ul>
+
+        </div>
+        <div class="d-flex flex-column gap-2  align-items-center">
+          <img class="pillar" src="assets/icons/pillar.png" alt="">
+          <strong>Polimorfismo</strong>
+          <ul>
+            <li>Reutilizável</li>
+            <li>Sobrescrita de métodos</li>
+
+          </ul>
+
+        </div>
+      </div>
+      <div class="d-flex flex-wrap pt-3 gap-3">
+        <div class="d-flex flex-column">
+          <p class="bg-secondary p-2">Entidade</p>
+          <p>Carro</p>
+          <p>Sonho</p>
+          <p>ContaBancaria</p>
+        </div>
+        <div class="d-flex flex-column">
+          <p class="bg-secondary p-2">Identidade</p>
+          <p><code>x = new Carro()</code></p>
+          <p><code>x = new Sonho()</code></p>
+          <p><code>x = new ContaBancaria()</code></p>
+        </div>
+        <div class="d-flex flex-column">
+          <p class="bg-secondary p-2">Características (atributos)</p>
+          <p>marca, modelo, cor, qtdPortas</p>
+          <p>tipo, historia, gostaria_sonhar_denovo</p>
+          <p>agencia, numeroConta, saldo, limite</p>
+        </div>
+        <div class="d-flex flex-column">
+          <p class="bg-secondary p-2">Ações (métodos)</p>
+          <p>ligar, acelerar, freiar, desligar</p>
+          <p>exibirHistoria</p>
+          <p>depositar, sacar, consultarSaldo</p>
+        </div>
+      </div>
+
+    </section>
+    <section>
+      <h3>Abstração</h3>
+      <pre><code>
+          class Animal {
+            constructor(cor, tamanho) {
+              this.cor = cor;
+              this.tamanho = tamanho;
+            }
+            dormir() {
+              console.log('dormir');
+            }
+          }
+      </code></pre>
+    </section>
+    <section>
+      <h3>Encapsulamento</h3>
+      <pre><code>
+          class TV {
+            #canalAtivo; // Campo privado
+    
+            constructor() {
+              this.relacaoCanais = [2, 5, 7, 10]; // Corrigido para o formato correto de Array
+              this.#canalAtivo = 5;
+              this.volume = 5;
+            }
+    
+            // Método público para acessar o canal ativo
+    
+            getCanalAtivo() {
+              return this.#canalAtivo;
+            }
+            setCanalAtivo(canal) {
+              this.#canalAtivo = canal;
+            }
+          }
+          let tv = new TV();
+    
+          console.log(tv.getCanalAtivo());
+          tv.setCanalAtivo(9);
+          console.log(tv.getCanalAtivo());
+      </code></pre>
+      <script>
+        class TV {
+          #canalAtivo; // Campo privado
+
+          constructor() {
+            this.relacaoCanais = [2, 5, 7, 10]; // Corrigido para o formato correto de Array
+            this.#canalAtivo = 5;
+            this.volume = 5;
+          }
+
+          // Método público para acessar o canal ativo
+
+          getCanalAtivo() {
+            return this.#canalAtivo;
+          }
+          setCanalAtivo(canal) {
+            this.#canalAtivo = canal;
+          }
+        }
+        let tv = new TV();
+
+        console.log(tv.getCanalAtivo());
+        tv.setCanalAtivo(9);
+        console.log(tv.getCanalAtivo());
+      </script>
+    </section>
+    <section>
+      <h3>Herança</h3>
+      <pre><code>
+            class Animal {
+              constructor(cor, tamanho) {
+                this.cor = cor;
+                this.tamanho = tamanho;
+              }
+              dormir() {
+                console.log('dormir');
+              }
+            }
+            //classes filhas, ou que herdam.
+      
+            class Cachorro extends Animal {
+              constructor(cor, tamanho, orelhas) {
+                super(cor, tamanho);
+                this.orelhas = orelhas;
+              }
+              correr() {
+                console.log('correr');
+              };
+              rosnar() {
+                console.log('rosnar');
+              }
+            }
+      
+            class Passaro extends Animal {
+              constructor(cor, tamanho, bico) {
+                super(cor, tamanho)
+                this.bico = bico;
+              }
+              voar() {
+                console.log('voar');
+              }
+      
+            }
+            let mel = new Cachorro('preto', 30, 'pequenas');
+            let picaPau = new Passaro('azul', 10, 'grande')
+      
+            console.log(mel)
+            console.log(picaPau);
+      
+            mel.dormir();
+            picaPau.dormir()
+      </code></pre>
+      <script>
+        class Animal {
+          constructor(cor, tamanho) {
+            this.cor = cor;
+            this.tamanho = tamanho;
+          }
+          dormir() {
+            console.log('dormir');
+          }
+        }
+        //classes filhas, ou que herdam.
+
+        class Cachorro extends Animal {
+          constructor(cor, tamanho, orelhas) {
+            super(cor, tamanho);
+            this.orelhas = orelhas;
+          }
+          correr() {
+            console.log('correr');
+          };
+          rosnar() {
+            console.log('rosnar');
+          }
+        }
+
+        class Passaro extends Animal {
+          constructor(cor, tamanho, bico) {
+            super(cor, tamanho)
+            this.bico = bico;
+          }
+          voar() {
+            console.log('voar');
+          }
+
+        }
+        let mel = new Cachorro('preto', 30, 'pequenas');
+        let picaPau = new Passaro('azul', 10, 'grande')
+
+        console.log(mel)
+        console.log(picaPau);
+
+        mel.dormir();
+        picaPau.dormir()
+      </script>
+    </section>
+    <section>
+      <h3>Polimorfismo</h3>
+      <pre><code>
+          // Classe base Carro
+          class Carro {
+            dirigir() {
+              console.log('Dirigindo um carro genérico');
+            }
+          }
+
+          // Classe derivada Esportivo
+          class Esportivo extends Carro {
+            dirigir() {
+              console.log('Dirigindo um carro esportivo rápido!');
+            }
+          }
+
+          // Classe derivada SUV
+          class SUV extends Carro {
+            dirigir() {
+              console.log('Dirigindo um SUV robusto!');
+            }
+          }
+
+          // Classe derivada Caminhao
+          class Caminhao extends Carro {
+            dirigir() {
+              console.log('Dirigindo um caminhão carregado!');
+            }
+          }
+
+          // Função para testar o polimorfismo
+          function testarCarro(carro) {
+            carro.dirigir(); // Chamará o método dirigir() de acordo com a classe do objeto
+          }
+
+          // Criando instâncias das classes derivadas
+          let carroGenerico = new Carro();
+          let carroEsportivo = new Esportivo();
+          let carroSUV = new SUV();
+          let carroCaminhao = new Caminhao();
+
+
+          testarCarro(carroGenerico); 
+          testarCarro(carroEsportivo);
+          testarCarro(carroSUV);      
+          testarCarro(carroCaminhao);  
+      </code></pre>
+      <script>
+        // Classe base Carro
+        class Carro {
+          dirigir() {
+            console.log('Dirigindo um carro genérico');
+          }
+        }
+
+        // Classe derivada Esportivo
+        class Esportivo extends Carro {
+          dirigir() {
+            console.log('Dirigindo um carro esportivo rápido!');
+          }
+        }
+
+        // Classe derivada SUV
+        class SUV extends Carro {
+          dirigir() {
+            console.log('Dirigindo um SUV robusto!');
+          }
+        }
+
+        // Classe derivada Caminhao
+        class Caminhao extends Carro {
+          dirigir() {
+            console.log('Dirigindo um caminhão carregado!');
+          }
+        }
+
+        // Função para testar o polimorfismo
+        function testarCarro(carro) {
+          carro.dirigir(); // Chamará o método dirigir() de acordo com a classe do objeto
+        }
+
+        // Criando instâncias das classes derivadas
+        let carroGenerico = new Carro();
+        let carroEsportivo = new Esportivo();
+        let carroSUV = new SUV();
+        let carroCaminhao = new Caminhao();
+
+
+        testarCarro(carroGenerico);
+        testarCarro(carroEsportivo);
+        testarCarro(carroSUV);
+        testarCarro(carroCaminhao);  
+      </script>
+    </section>
+    <section>
+      <h3>Objetos Literais ou Objetos Estáticos</h3>
+      <p>Utilizados quando não ha necessidade de se criar uma class para um objeto. Se ele for ser usado apenas uma vez
+        por exemplo</p>
+      <pre><code>
+           
+        let nome = 'Armando'; //document.getElementById('nomeInput').value
+        let idade = 29;
+        let sexo = 'Masculino';
+        let profissao = 'Operador de Máquinas';
+
+
+        let cliente = {
+          nome: nome, //o primeiro é atributo, o segundo é a variavel recuperada.
+          idade: idade,
+          sexo: sexo,
+          profissao: profissao,
+          exibirResumo: function () {
+            console.log(`${this.nome}, ${this.idade} anos, ${this.profissao}.`)
+          }
+        }
+        cliente.exibirResumo();
+
+        //melhorias a partir ES6
+
+        let cliente2 = {
+          nome, //o primeiro é atributo, o segundo é a variavel recuperada.
+          idade,
+          sexo,
+          profissao,
+          exibirResumo() {
+            console.log(`${this.nome}, ${this.idade} anos, ${this.profissao}.`)
+          }
+        }
+
+        cliente2.exibirResumo();
+      </code></pre>
+
+      <script>
+
+        let nome = 'Armando'; //document.getElementById('nomeInput').value
+        let idade = 29;
+        let sexo = 'Masculino';
+        let profissao = 'Operador de Máquinas';
+
+
+        let cliente = {
+          nome: nome, //o primeiro é atributo, o segundo é a variavel recuperada.
+          idade: idade,
+          sexo: sexo,
+          profissao: profissao,
+          exibirResumo: function () {
+            console.log(`${this.nome}, ${this.idade} anos, ${this.profissao}.`)
+          }
+        }
+        cliente.exibirResumo();
+
+        //melhorias a partir ES6
+
+        let cliente2 = {
+          nome, //o primeiro é atributo, o segundo é a variavel recuperada.
+          idade,
+          sexo,
+          profissao,
+          exibirResumo() {
+            console.log(`${this.nome}, ${this.idade} anos, ${this.profissao}.`)
+          }
+        }
+
+        cliente2.exibirResumo();
+      </script>
+    </section>
+    <section>
+      <h3>Funções construtoras</h3>
+
+      <script>
+        let Carro2 = function (cor, modelo, marca, velocidadeAtual, velocidadeMax) {
+          this.cor = cor;
+          this.modelo = modelo;
+          this.marca = marca;
+          this.velocidadeAtual = velocidadeAtual;
+          this.velocidadeMax = velocidadeMax;
+
+          this.acelerar = function () {
+            let velocidade = this.getVelocidadeAtual() + 10;
+            this.setVelocidadeAtual(velocidade)
+          }
+          this.getVelocidadeAtual = function () {
+            return this.velocidadeAtual;
+          }
+          this.setVelocidadeAtual = function (velocidadeAtual) {
+            this.velocidadeAtual = velocidadeAtual;
+          }
+        }
+
+        let chevette = new Carro2('preto', 'chevette', 'chevrolet', 0, 180);
+
+        console.log(chevette);
+        chevette.acelerar();
+        console.log(chevette);
+
+      </script>
+    </section>
+    <style>
+      .pillar {
+        width: 50px;
+      }
+    </style>
+  </main>
+
+</body>
+
+</html>

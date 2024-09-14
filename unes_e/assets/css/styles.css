@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-primaria: #383f5d;
+    --cor-secundaria: #6d78a8;
+}
+
+body {
+    max-width: 980px;
+    padding: 16px;
+    margin: auto;
+    height: 100vh;
+}
+
+li a {
+    text-decoration: none;
+
+}
+li a:hover {
+    text-decoration: underline;
+    color: var(--cor-secundaria);
+
+}
+
+.cor-primaria {
+    color: var(--cor-primaria);
+}
+
+.cor-secundaria {
+    color: var(--cor-secundaria);
+}

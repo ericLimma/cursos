@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #111518;
+  --dark-gray: #212327;
+  --gray: #303236;
+  --light-gray: #4c4f58;
+  --blue: #0e3a8a;
+  --white: #f5f5f5;
+  --red: rgb(117, 11, 11);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+a,
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+body {
+  align-items: center;
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 200;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+.calc-body {
+  aspect-ratio: 1 / 2;
+  align-content: space-around;
+  background-color: var(--dark-gray);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  max-height: 932px;
+  max-width: 430px;
+  width: 100vw;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.status-bar {
+  display: flex;
+  padding: 1rem 3rem 0.5rem;
+  justify-content: space-between;
+  align-content: flex-end;
+}
+
+.clock {
+  font-size: 12px;
+}
+
+.camera {
+  width: 50%;
+  height: 2rem;
+  background-color: var(--black);
+  border-radius: 0 0 16px 16px;
+  margin-top: -1rem;
+}
+
+.batery-signal img {
+  width: 18px;
+}
+
+.menu {
+  display: flex;
+  padding: 1rem 2rem 0;
+  justify-content: space-between;
+}
+
+.menu button {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  background: none;
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  font-weight: 200;
+}
+
+.menu-icon i {
+  color: var(--blue);
+  font-size: 1.2rem;
+}
+
+.menu-text {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.display-visor {
+  width: 100%;
+  overflow: auto;
+  white-space: pre-wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  text-align: right;
+  color: var(--white);
+  font-size: 2.5rem;
+  height: 100%;
+  align-content: flex-end
+}
+
+.display-result {
+  color: var(--light-gray);
+  font-size: 1.6rem;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.dropdown-input {
+  display: none;
+}
+
+.dropdown-label {
+  align-items: center;
+  background-color: var(--blue);
+  border-radius: 16px 16px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0 2rem;
+  margin-bottom: -2rem;
+  align-content: center;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+  transform: translateY(60px);
+  cursor: pointer;
+}
+
+.dropdown-input:checked+.dropdown-label {
+  transform: translateY(0);
+}
+
+.dropdown-icon {
+  display: inline-block;
+  transition: transform 0.5s ease;
+}
+
+.dropdown-input:checked+.dropdown-label .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.num-pad {
+  align-items: center;
+  background-color: var(--dark-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 0.8rem;
+  padding: 3rem 1rem;
+  border-radius: 16px 16px 48px 48px;
+  z-index: 3;
+  position: relative;
+}
+
+.num-row {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.btn {
+  align-items: center;
+  background-color: var(--gray);
+  border: none;
+  border-radius: 100px;
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.5rem;
+  height: 65px;
+  justify-content: center;
+  padding: 0.8rem;
+  width: 65px;
+}
+
+.function-keys {
+  align-items: center;
+  border-radius: 16px 16px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.function-keys .btn {
+  background: none;
+  padding: 0.1rem;
+}
+
+.btn-clear {
+  background-color: var(--dark-gray);
+  border: 1px solid var(--blue);
+  text-transform: uppercase;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-clear:hover {
+  background-color: var(--red);
+  border: 1px solid var(--red);
+
+}
+
+.btn-blue {
+  background-color: var(--blue);
+}
+
+.divide {
+  font-size: 36px;
+}
+
+.desktop {
+  display: none;
+}
+
+
+@media screen and (min-width: 431px) {
+  .calc-body {
+    border-radius: 48px;
+  }
+
+  .desktop {
+    display: flex;
+  }
+}
