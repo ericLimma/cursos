@@ -1,0 +1,27 @@
+2#Impressora com qualidade ruim#Impressora#impressora não imprime
+3#Impressora atolando papel#Impressora#impressora não imprime
+4#Impressora com falha de conexão#Impressora#impressora não imprime
+1#Impressora sem tinta#Impressora#impressora não imprime
+3#Impressora fazendo barulho excessivo#Impressora#impressora não imprime
+1#Software não está respondendo#Software#software não abre
+2#Software trava ao iniciar#Software#software não abre
+3#Software desatualizado causando problemas#Software#software não abre
+4#Software não consegue acessar arquivos#Software#software não abre
+4#Software com erro de configuração#Software#software não abre
+3#Teclado sem funcionamento#Hardware#problema no hardware
+2#Monitor piscando#Hardware#problema no hardware
+1#Mouse não reconhecido#Hardware#problema no hardware
+2#Placa de vídeo com falhas#Hardware#problema no hardware
+1#Unidade de disco rígido com erros#Hardware#problema no hardware
+1#Rede Wi-Fi instável#Rede#rede caiu
+3#Problemas com conexão à internet#Rede#rede caiu
+4#Rede com sinal fraco#Rede#rede caiu
+2#Rede desconectando constantemente#Rede#rede caiu
+3#Problemas de IP na rede#Rede#rede caiu
+4#Usuário não consegue acessar#Criação Usuário#novo usuário não criado
+3#Usuário não tem privilégios#Criação Usuário#novo usuário não criado
+2#Erro ao criar usuário#Criação Usuário#novo usuário não criado
+4#Usuário criado mas não ativo#Criação Usuário#novo usuário não criado
+2#Usuário não aparece na lista#Criação Usuário#novo usuário não criado
+1#212#Impressora#0123
+
