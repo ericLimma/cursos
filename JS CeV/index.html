@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+        <link defer rel="stylesheet" href="style.css">
+</head>
+
+<body>
+        <div class="container mt-5">
+                <h1 class="display-4 text-center">JavaScript Exercicios</h1>
+
+                <div class="p-1">
+                        <h2>1. Manipulação de DOM: Alterando o conteúdo de um parágrafo</h2>
+                        <p>Crie um parágrafo (&lt;p&gt;) na sua página e adicione um botão. Quando o botão for clicado,
+                                altere o texto
+                                do parágrafo para "Você clicou no botão!".</p>
+                        <div class="d-flex p-2 align-items-start">
+                                <h4>Resolução:</h4>
+                                <p class="p-2" id="resolucao-1">Texto</p>
+                        </div>
+                        <button class="btn btn-danger" id="btn-1">Alterar Texto</button>
+                </div>
+
+                <div class="p-1">
+                        <h2>2. Mudar a cor de fundo com JavaScript</h2>
+                        <p>
+                                Adicione um botão à página. Quando o botão for clicado, altere a cor de fundo da página
+                                para uma cor aleatória.
+                        </p>
+                        <button class="btn btn-danger" id="btn-2">Alter Cor</button>
+                </div>
+
+                <div class="p-1">
+                        <h2>3. Contador com incremento e decremento</h2>
+                        <p>
+                                Crie um contador que começa em 0. Adicione dois botões: um para incrementar o contador e
+                                outro para
+                                decrementá-lo. Exiba o valor do contador na página.
+                        </p>
+                        <div class="d-flex p-2 gap-3 align-items-start">
+                                <h4>Resolução:</h4>
+                                <button class="btn btn-success" id="btn-plus">+</button>
+                                <p class="p-2" id="count-1">0</p>
+                                <button class="btn btn-danger" id="btn-minus">-</button>
+                        </div>
+                </div>
+
+                <div class="p-1">
+                        <h2>4. Validando um formulário</h2>
+                        <p>Crie um formulário simples com campos para nome e email. Use JavaScript para validar se os
+                                campos não estão vazios antes de permitir que o formulário seja enviado.</p>
+                        <form id="form" onsubmit="sendForm(event)">
+                                <fieldset class="d-flex flex-column">
+                                        <legend>Informações de contato:</legend>
+
+                                        <label for="name">Nome</label>
+                                        <input class="p-1 input" type="text" name="name" id="name">
+
+                                        <label for="email">Email</label>
+                                        <input class="p-1 input" type="email" id="email">
+                                </fieldset>
+                                <button type="submit" class="btn btn-success my-2">Enviar</button>
+                        </form>
+                </div>
+
+                <div class="p-1">
+                        <h2>5. Exibindo/Escondendo um modal</h2>
+                        <p>Crie um modal (caixa de diálogo) que aparece quando o usuário clica em um botão "Abrir
+                                Modal". O modal deve
+                                ter um botão "Fechar" que o esconde.</p>
+                        <button class="btn-primary btn" id="open-modal">Abrir Modal</button>
+
+                        <div id="modal"
+                                class="bg-success p-3 rounded position-fixed justify-content-center d-flex align-items-center d-none">
+
+                                <button id="close-modal"
+                                        class="btn btn-danger rounded-circle position-absolute">x</button>
+                                <p id="modal-text" class="h3"></p>
+
+                        </div>
+                </div>
+
+                <div class="p-1">
+                        <h2>6. Accordion (Acordeão)</h2>
+                        <p>Crie uma lista de itens. Ao clicar em um item, ele deve se expandir para mostrar um conteúdo
+                                adicional e o
+                                restante dos itens devem ficar colapsados.</p>
+
+                        <div class="dropdown" id="dropdown">
+                                <button id="dropdown-btn" class="btn btn-info">
+                                        Expandir Lista
+                                        <span class="dropdown-arrow">^</span>
+                                </button>
+
+                                <ul class="dropdown-list">
+                                        <li>Maça</li>
+                                        <li>Banana</li>
+                                        <li>Melancia</li>
+                                        <li>Manga</li>
+                                        <li>Uva</li>
+                                </ul>
+                        </div>
+                </div>
+
+                <div class="p-1">
+                        <h2>7. Filtro de uma lista</h2>
+                        <p>Crie uma lista de itens (por exemplo, frutas) e um campo de pesquisa. Conforme o usuário
+                                digitar, filtre a
+                                lista para exibir apenas os itens que correspondem ao termo de pesquisa.</p>
+                        <div class="input-group">
+                                <input type="text" id="fruits-search" class="form-control"
+                                        placeholder="Pesquise uma fruta..."
+                                        aria-label="Recipient's username with two button addons" autocomplete="off">
+                                <button class="btn btn-danger" id="search-clear-btn" type="button">Limpar</button>
+                        </div>
+                        <ul id="fruits-list">
+                                <li>Maçã</li>
+                                <li>Banana</li>
+                                <li>Laranja</li>
+                                <li>Morango</li>
+                                <li>Uva</li>
+                                <li>Melancia</li>
+                                <li>Abacaxi</li>
+                                <li>Kiwi</li>
+                                <li>Manga</li>
+                                <li>Pera</li>
+                        </ul>
+                </div>
+
+                <div class="p-1">
+                        <h2>8. Exibir imagem após clique</h2>
+                        <p>Crie uma página com várias miniaturas de imagens. Quando o usuário clicar em uma miniatura, a
+                                imagem grande
+                                correspondente deve ser exibida na tela.</p>
+
+                        <div class="imgs d-flex flex-wrap gap-1 justify-content-center">
+                                <img src="img/assassinscreed.png" alt="">
+                                <img src="img/fortnite.png" alt="">
+                                <img src="img/freefire.png" alt="">
+                                <img src="img/gta-v.png" alt="">
+                                <img src="img/halo5.png" alt="">
+                                <img src="img/league-of-legends.png" alt="">
+                                <img src="img/red-dead-redemption-2.png" alt="">
+                                <img src="img/zelda.png" alt="">
+                        </div>
+                        <div class="img-modal-overlay" id="img-modal-overlay"></div>
+                        <div class="img-modal" id="img-modal">
+                                <img src="" class="modal-display" id="modal-display" alt="Imagem Modal">
+                                <img src="img/x.webp" class="close-img-modal" id="close-img-modal" alt="close">
+                        </div>
+                        <style>
+
+                        </style>
+                </div>
+
+                <div class="p-1 position-relative">
+                        <h2>9. Contagem de caracteres em um textarea</h2>
+                        <p>Crie um campo de texto (&lt;textarea&gt;) onde, enquanto o usuário digita, o número de
+                                caracteres digitados é
+                                mostrado abaixo em tempo real.</p>
+                        <textarea name="textarea" id="textarea" class="textarea"></textarea>
+                        <div id="char-count" class="char-count">0</div>
+
+                </div>
+                <div class="p-1">
+                        <h2>10. Criar um temporizador de contagem regressiva</h2>
+                        <p>Crie um temporizador que exibe uma contagem regressiva de 10 segundos. Após esse
+                                tempo, exiba
+                                uma mensagem
+                                "Tempo esgotado!".</p>
+                        <div class="timer" id="timer">10</div>
+                </div>
+
+
+                <script type="module" src="js/app.js"></script>
+</body>
+
+</html>

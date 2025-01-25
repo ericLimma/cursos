@@ -1,0 +1,20 @@
+1. Contagem Regressiva
+Crie uma função que exiba uma contagem regressiva de 10 até 0 em segundos. Ao final, exiba uma mensagem como "Tempo esgotado!".
+2. Validação de Email
+Escreva uma função que verifique se um email é válido (deve conter @ e .).
+3. Calculadora Simples
+Implemente uma calculadora simples que possa realizar adição, subtração, multiplicação e divisão com dois números.
+4. Inverter uma String
+Crie uma função que inverta uma string fornecida. Exemplo: "Javascript" deve virar "tpircsavaJ".
+5. Fatorial de um Número
+Crie uma função que calcule o fatorial de um número dado. Exemplo: 5! = 5 * 4 * 3 * 2 * 1.
+6. Verificar Palíndromos
+Crie uma função que verifique se uma palavra é um palíndromo (ou seja, se ela é igual quando lida de trás para frente). Exemplo: "arara" é um palíndromo.
+7. Somar Números em um Array
+Escreva uma função que receba um array de números e retorne a soma de todos eles.
+8. Fibonacci
+Implemente uma função que calcule os primeiros n números da sequência de Fibonacci.
+9. Ordenação de Array
+Crie uma função que ordene um array de números em ordem crescente ou decrescente.
+10. Transformar Texto para Camel Case
+Crie uma função que converta uma string de formato snake_case para camelCase. Exemplo: "minha_funcao_em_javascript" deve se tornar "minhaFuncaoEmJavascript".

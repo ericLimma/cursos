@@ -1,0 +1,177 @@
+* {
+        margin: none;
+        padding: none;
+        box-sizing: border-box;
+}
+
+body {
+        padding: 2rem;
+        background-color: #f5f5dc;
+        width: 100vw;
+}
+
+#modal {
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 350px;
+        margin: auto;
+        aspect-ratio: 16 / 9;
+        transition: transform .3s ease-in-out;
+}
+
+#close-modal {
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        aspect-ratio: 1/1;
+}
+
+ul {
+        list-style: none;
+}
+
+.dropdown-arrow {
+        display: inline-block;
+        transform: rotate(180deg);
+        transition: transform .3s ease-in-out;
+}
+
+.dropdown-list {
+        max-height: 0;
+        overflow: hidden;
+        padding-top: 1rem;
+        transition: max-height .4s ease-in-out;
+}
+
+.dropdown.expanded .dropdown-list {
+        height: auto;
+}
+
+.dropdown.expanded .dropdown-arrow {
+        transform: rotate(0);
+}
+
+.dropdown.expanded .dropdown-list {
+        max-height: 500px;
+}
+
+.imgs {
+        width: 100%;
+}
+
+.imgs img {
+        width: 100%;
+        max-width: 300px;
+        gap: 1rem;
+        object-fit: cover;
+        cursor: pointer;
+}
+
+.show.img-modal-overlay {
+        display: flex;
+}
+
+.img-modal-overlay {
+        width: 100vw;
+        height: 100vh;
+        background-color: #2c2a2a9c;
+        position: fixed;
+        top: 0;
+        right: 0;
+        backdrop-filter: blur(5px);
+        z-index: 1000;
+        display: none;
+}
+
+.show.img-modal {
+        display: block;
+}
+
+.img-modal {
+        display: none;
+        width: 80vw;
+        max-height: 90vh;
+        /* Limite de 90% da altura da janela */
+        height: auto;
+        /* Ajusta automaticamente com base no conteúdo */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* Centraliza o modal */
+        z-index: 1001;
+        box-shadow: 4px 4px 4px #000000a1;
+        border-radius: 1rem;
+        background-color: white;
+        /* Para garantir que o modal tenha fundo */
+        padding: 1rem;
+        overflow: auto;
+        /* Caso a imagem ultrapasse o limite de altura */
+}
+
+.close-img-modal {
+        aspect-ratio: 1/1;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        width: 40px;
+        filter: drop-shadow(4px 4px 4px #000000a1);
+}
+
+.modal-display {
+        width: 100%;
+        height: auto;
+        /* Ajusta a altura da imagem automaticamente */
+        border-radius: 1rem;
+}
+
+.textarea {
+        width: 100%;
+        border: none;
+        outline: none;
+        resize: none;
+        padding: 1rem;
+        font-size: 1.5rem;
+
+}
+
+.char-count {
+        width: 60px;
+        height: 40px;
+        background-color: #830f0f;
+        padding: 6px;
+        color: white;
+        text-align: right;
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+}
+
+.timer {
+        width: 200px;
+        aspect-ratio: 1/1;
+        background-color: #3c3c3c;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 100px;
+        border-radius: 1rem;
+        box-shadow: 4px 4px 4px #0000009d;
+        margin: auto;
+        cursor: pointer;
+        transition: transform .2s ease-in-out;
+}
+
+.timer:active {
+        transform: scale(.95);
+}
+
+.boom {
+        width: 100%;
+}
